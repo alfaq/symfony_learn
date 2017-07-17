@@ -1,32 +1,29 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Mozh
- * Date: 29-06-2017
- * Time: 16:13
+ * Date: 17-07-2017
+ * Time: 11:15
  */
 
-// src/AppBundle/Controller/LuckyController.php
-namespace AppBundle\Controller;
-
+namespace TestBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class LuckyController extends Controller
+class DefaultController extends Controller
 {
   /**
-   * @Route("/lucky/number/{max}")
+   * @Route("/test")
    */
-  public function numberAction($max)
+  public function indexAction()
   {
-    $number = mt_rand(0, $max);
     $url = $this->generateUrl(
       'test_route',
       array(),
       UrlGeneratorInterface::ABSOLUTE_URL
-      //array('slug' => 'my-blog-post')
+    //array('slug' => 'my-blog-post')
     );
 
     $navigation = array(array('href'=> $url, 'caption'=>'test'), array('href'=> '/', 'caption'=>'test123'));

@@ -1,3 +1,13 @@
+mozh:
+    resource: "@MozhBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test:
+    resource: "@TestBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
